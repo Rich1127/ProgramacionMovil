@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
 
+import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import ProjectScreen from './screens/ProjectScreen';
@@ -31,6 +32,13 @@ export default function App() {
           },
         }}
       >
+        <Tab.Screen
+          name="Inicio"
+          component={HomeScreen}
+          options={{
+            tabBarIcon: () => <Text style={{ fontSize: 20 }}>🏺</Text>,
+          }}
+        />
         <Tab.Screen
           name="Perfil"
           component={ProfileScreen}
