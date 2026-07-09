@@ -6,6 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import ProjectScreen from './screens/ProjectScreen';
+import BaseDatosScreen from './screens/BaseDatosScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -58,6 +59,13 @@ export default function App() {
           component={ProjectScreen}
           options={{
             tabBarIcon: () => <Text style={{ fontSize: 20 }}>📦</Text>,
+          }}
+        />
+        <Tab.Screen
+          name="Base de Datos"
+          component={BaseDatosScreen}
+          options={{
+            tabBarIcon: () => <Text style={{ fontSize: 20 }}>🗄️</Text>,
           }}
         />
       </Tab.Navigator>
